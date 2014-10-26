@@ -1,0 +1,66 @@
+/****************************************
+ * Collision Testimonials
+ * Main CSS Rules
+ *
+ * Author: Backend Labs, Inc.
+ * Author URI: http://www.backendlabs.com
+ ****************************************/
+ 
+/* Form */
+form#testimonials {
+	float:left;
+	text-align:left;
+	width:100%;
+}
+form#testimonials p {
+	float:left;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+form#testimonials label {
+	display:block;
+	font-weight:bold;
+	text-align:right;
+	width:140px;
+	float:left;
+	padding:6px 0 0;
+}
+form#testimonials input, form#testimonials textarea {
+	float:left;
+	font-size:12px;
+	padding:4px;
+	width:250px;
+	margin:2px 0 20px 10px;
+	border:solid 1px #aacfe4;
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+}
+form#testimonials input {height:18px;}
+form#testimonials input#submit {
+	clear:both;
+	margin-left:150px;
+	width:125px;
+	height:31px;
+	background:#aacfe4;
+	text-align:center;
+	line-height:12px;
+	color:#06f;
+	font-size:11px;
+	font-weight:bold;
+}
+.collisionsuccess {
+	color:#090;
+	font-weight:bold;
+	padding:0;
+	font-size:12px;
+}
+.collisionerror {
+	color:#f00;
+	font-weight:bold;
+	padding:0;
+}
+form#testimonials .collisionerror input, form#testimonials .collisionerror textarea {
+	border-color:#f00;
+}
