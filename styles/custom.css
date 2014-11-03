@@ -22,9 +22,11 @@
 h3, h4, h5, h6 {line-height:1.5 !important}
 
 p {
-font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; font-size: 15px; line-height: 22px; margin-top: 11px; text-align: justify; color: rgb(47, 47, 47); 1px 1px 1px;}
+font-family: Verdana,sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
 
-
+div.c1 li.c2 a {
+  color: red;
+}
 
 /* Contact */
 
@@ -94,7 +96,7 @@ margin-right:7px;margin-bottom:7px;float:left;
 
 .social_bookmarks a {font-size:smaller !important;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-right:20px;}
 
-.copyright {font-size:smaller;letter-spacing:1px;}
+.copyright {font-size:smaller;letter-spacing:1px;margin-left: 0px}
 
 
 /* Responsive Image */
@@ -138,31 +140,15 @@ img {max-width:100%;height:auto;width:auto;-moz-box-sizing:border-box;-webkit-bo
 .divPanel.nobottom {padding-bottom:0px}
 
 
-/***** BOOTSTRAP CSS BASE OVERRIDE *****/
+body{background: url(back.png) center repeat-x; background-size: auto 100%;}
 
-.navbar .nav-pills > li > a {text-shadow:none;font-weight:normal;}
-
-.navbar .dropdown-menu li > a {text-shadow:none;font-weight:normal;}
-
-.navbar .nav-pills > li > .dropdown-menu:before {border:none;}
-
-.navbar .nav-pills > li > .dropdown-menu:after {border:none;}
-
-.navbar .nav-pills > .active > a, .navbar .nav-pills > .active > a:hover, .navbar .nav-pills > .active > a:focus {-webkit-box-shadow: none;box-shadow: none;}
-
-.navbar .nav-pills > li > a:hover, .navbar .nav-pills li.dropdown.open.active > .dropdown-toggle {-webkit-transition: ease-in-out .2s;-moz-transition: ease-in-out .2s;-o-transition: ease-in-out .2s;-ms-transition: ease-in-out .2s; transition: ease-in-out .2s;}
-
-
-
-body{background-image: url(back.png); background-repeat: repeat repeat;}
-
-#divBoxed{margin-top: 51px; }
+#divBoxed{margin-top: 50px;margin-bottom: 50px}
 
 #divLogo{margin-top: 43px; margin-bottom: 0px; }
 
 #divSiteTitle{font-family: Chewy; font-size: 34px; line-height: 50px; color: rgb(212, 50, 32); text-shadow: none; letter-spacing: 4px; font-weight: bold; font-style: normal; text-transform: uppercase;}
 
-#divTagLine{color: rgb(0, 120, 0); line-height: 10px; font-size: 14px; padding-left: 2px; padding-right: 2px; text-shadow: none; font-family: Trebuchet MS; font-weight: bold; font-style: normal; text-decoration: initial;}
+#divTagLine{color: rgb(0, 120, 0); line-height: 10px; font-size: 12px; padding-left: 2px; padding-right: 2px; text-shadow: none; font-family: Trebuchet MS; font-weight: normal; font-style: normal; text-decoration: initial;}
 
 .navContainer {}
 
@@ -192,14 +178,14 @@ body{background-image: url(back.png); background-repeat: repeat repeat;}
 
 .cap3 > div {opacity: 0.85;filter:alpha(opacity=85);}
 
-.cap4 > div {opacity: 0.85;filter:alpha(opacity=85);background-color:rgb(219, 172, 0);}
+.cap4 > div {opacity: 0.85;filter:alpha(opacity=85);background-color:rgb(0, 191, 255);}
 
 .cap5 > div {opacity: 0.85;filter:alpha(opacity=85);background-color:rgb(219, 172, 0);}
 
 .camera_full_width {margin-left: -40px;margin-right: -40px}
 
 h1{font-weight: normal; font-style: normal; letter-spacing: 0px; line-height: 30px; margin-top: 30px; 
-font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; font-size: 20px; color: rgb(0, 0, 0);}
+font-family: Verdana,sans-serif; font-size: 16px; color: rgb(0, 0, 0);}
 
 .page-content, .page-content li{line-height: 22px; ;font-family: Maven Pro;}
 
@@ -215,24 +201,23 @@ font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; fo
 
 #divFooter{border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; background-color: rgb(191, 13, 0); color: rgb(227, 227, 227); font-family: Maven Pro; text-transform: none; font-size: 12px; letter-spacing: 0px; line-height: 22px; }
 
-.divPanel{padding: 40px;}
+.divPanel{padding: 30px;}
 
 #divFooter a{color: rgb(245, 204, 174); font-family: Maven Pro; font-size: 12px; line-height: 22px;}
 
 #divFooter h3{font-family: Terminal Dosis Light; font-weight: normal; font-style: normal; font-size: 19px; line-height: 45px; color: rgb(227, 227, 227);}
 
-h2{font-weight: normal; font-style: normal; ;font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
-font-size: 20px}
+h2{font-weight: bold; font-style: normal; ;font-family: Verdana,sans-serif; font-size: 14px}
 
 .transparent-bg{-moz-box-shadow: rgba(0, 0, 0, 0.294118) 0px 1px 4px; -webkit-box-shadow: rgba(0, 0, 0, 0.294118) 0px 1px 4px; box-shadow: rgba(0, 0, 0, 0.294118) 0px 1px 4px;   background-color: rgb(255, 255, 255); border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px;}
 
 .breadcrumbs a{color: rgb(191, 13, 0);font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;}
 
-#divHeaderLine1{font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; font-size: 26px; line-height: 40px; margin-top: 16px; text-transform: none; color: rgb(47, 47, 47);}
+#divHeaderLine1{font-family: Verdana, sans-serif; font-size: 20px; line-height: 40px; margin-top: 16px; text-transform: none; color: rgb(47, 47, 47);}
 
-#divHeaderLine2{font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; font-size: 15px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(47, 47, 47); 1px 1px 1px;}
+#divHeaderLine2{font-family: Verdana, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(47, 47, 47); 1px 1px 1px;}
 
-#divHeaderLine3{margin-top: 37px; line-height: 21px; font-family: 'Arial, Helvetica, sans-serif'}
+#divHeaderLine3{margin-top: 37px; line-height: 18px; font-family: Verdana, sans-serif; font-size: 11px}
 
 a.btn, a.btn-large, a.btn-small, a.btn-mini {color:#333}
 
@@ -268,35 +253,35 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Ter
 
 #divVideo{border: 7px solid rgb(255, 255, 255); margin-left: -5px; -webkit-box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; box-shadow: rgba(0, 0, 0, 0.498039) 0px 15px 10px -10px, rgba(0, 0, 0, 0.298039) 0px 1px 4px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; margin-top: 15px; }
 
-.navbar .dropdown-menu {background-color: rgb(255, 255, 255); border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;}
+.navbar .dropdown-menu {background-color: rgb(255, 255, 255);}
 
-.navbar .dropdown-menu li > a {color: rgb(0, 0, 0);}
+.navbar .dropdown-menu li > a {color: rgb(0, 120, 0);}
 
-.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover {filter:none;color:rgb(0, 0, 0);background-color:rgb(144, 238, 144);background-image:none}
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover {filter:none;color:rgb(0, 120, 0);background-color:rgb(255, 255, 255);background-image:none}
 
-.navbar .nav-pills > li > a {padding: 17px 30px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; color: rgb(0, 0, 0); margin-right: 2px; margin-left: 2px; border-bottom-style: none;}
+.navbar .nav-tabs  > li > a {padding: 10px 15px;}
 
-.navbar .nav-pills > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle {color: rgb(0, 0, 0); background-color: rgb(235, 235, 235); border-bottom-style: none;}
+.navbar .nav-tabs  > li > a:hover, .navbar .nav li.dropdown.open.active > .dropdown-toggle {color: rgb(0, 120, 0); background-color: rgb(235, 235, 235); border-bottom-style: none;}
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle {background:none}
 
-.navbar .nav-pills > .active > a, .navbar .nav-pills > .active > a:hover, .navbar .nav-pills li.dropdown.open > .dropdown-toggle, .navbar .nav-pills li.dropdown.active > .dropdown-toggle {color: rgb(0, 0, 0); background-color: rgb(144, 238, 144); border-bottom-style: none;}
+.navbar .nav-tabs  > .active > a, .navbar .nav-tabs  > .active > a:hover, .navbar .nav-tabs  li.dropdown.open > .dropdown-toggle, .navbar .nav-tabs li.dropdown.active > .dropdown-toggle {color: rgb(0, 120, 0); background-color: rgb(255, 255, 255); border-bottom-style: none;}
 
-.navbar .ddmenu {margin-top: 0px; margin-bottom: 3px;}
+.nav .ddmenu {margin-top: 30px; margin-bottom: 3px;}
 
-.navbar .nav-pills li.dropdown > .dropdown-toggle .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(0, 0, 0);}
+.navbar .nav-tabs  li.dropdown > .dropdown-toggle .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(255, 255, 255);}
 
-.navbar .nav-pills li.dropdown > .dropdown-toggle:hover .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(0, 0, 0);}
+.navbar .nav-tabs  li.dropdown > .dropdown-toggle:hover .caret {border-top-color:rgb(0, 0, 0);border-bottom-color:rgb(255, 255, 255);}
 
-.navbar .nav-pills li.dropdown.active > .dropdown-toggle .caret {border-top-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);}
+.navbar .nav-tabs  li.dropdown.active > .dropdown-toggle .caret {border-top-color:rgb(255, 255, 255);border-bottom-color:rgb(255, 255, 255);}
 
 .dropdown-menu .sub-menu {left:100%;position:absolute;top:0;visibility:hidden;margin-top:-1px;}
 
 .dropdown-menu li:hover .sub-menu {visibility:visible;}
 
-.ddmenu.nav-pills li a{font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px;}
+.ddmenu.nav-tabs li a{font-family: Verdana,sans-serif; font-size: 12px; line-height: 12px;}
 
-.ddmenu .dropdown-menu li a{font-family: Arial, Helvetica, sans-serif; line-height: 30px;}
+.ddmenu .dropdown-menu li a{font-family: Verdana,sans-serif; line-height: 30px;}
 
 .dropdown-menu .sub-menu {left:100%;position:absolute;top:0;visibility:hidden;margin-top:-1px;}
 .dropdown-menu li:hover .sub-menu {visibility:visible;}
@@ -324,7 +309,7 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Ter
 
     .navbar .btn-navbar-highlight {padding:9px 14px;margin-top:0px;}
 
-    .navbar {margin-top: 0px;padding-top:0px}
+    .navbar {margin-top: 10px;padding-top:10px}
 
     
     #decorative1, #decorative2 {margin-left:-20px;margin-right:-20px;padding-left:}
