@@ -22,7 +22,27 @@
 h3, h4, h5, h6 {line-height:1.5 !important}
 
 p {
-font-family: Verdana,sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
+
+.tab{ margin-left: 40px; }
+
+.wonder:before{
+  content:url('wonder.png');
+  margin-left: 40px;
+}
+
+.button-1 {
+    width: 70%;
+    color: white;
+    padding-left: .35em;
+    margin: .3em 0 .1em 0;
+	background-color: #6DBC51;
+}
+
+
+.read-more {
+    text-align: right;
+}
 
 div.c1 li.c2 a {
   color: red;
@@ -139,8 +159,8 @@ img {max-width:100%;height:auto;width:auto;-moz-box-sizing:border-box;-webkit-bo
 
 .divPanel.nobottom {padding-bottom:0px}
 
-
-body{background: url(back.png) center repeat-x; background-size: auto 100%;}
+body.index{background: url(back.png) center repeat-x; background-size: auto 100%;}
+body.home{background: url(crossword.png) repeat;}
 
 #divBoxed{margin-top: 50px;margin-bottom: 50px}
 
@@ -184,18 +204,18 @@ body{background: url(back.png) center repeat-x; background-size: auto 100%;}
 
 .camera_full_width {margin-left: -40px;margin-right: -40px}
 
-h1{font-weight: normal; font-style: normal; letter-spacing: 0px; line-height: 30px; margin-top: 30px; 
-font-family: Verdana,sans-serif; font-size: 16px; color: rgb(0, 0, 0);}
+h1{font-weight: bold; font-style: normal; letter-spacing: 0px; line-height: 30px; margin-top: 15px; 
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; color: rgb(0, 0, 0);}
 
 .page-content, .page-content li{line-height: 22px; ;font-family: Maven Pro;}
 
 .page-content a{color: rgb(191, 13, 0); font-family: Maven Pro;}
 
-.sidebox{background-color: rgb(250, 250, 250); -webkit-box-shadow: none; box-shadow: none; padding: 18px; margin-top: 26px; border: 1px solid rgb(235, 235, 235); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; font-family: Maven Pro; line-height: 24px; color: rgb(51, 51, 51);}
+.sidebox{background-color: rgb(250, 250, 250); -webkit-box-shadow: none; box-shadow: none; padding: 18px; margin-top: 40px; border: 1px solid rgb(235, 235, 235); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; font-family: Maven Pro; line-height: 24px; color: rgb(51, 51, 51);}
 
-.sidebar{padding-top: 23px; }
+.sidebar{padding-top: 50px; padding-left: 25px;}
 
-.sidebox-title{font-weight: normal; font-style: normal; font-size: 20px; letter-spacing: 0px; line-height: 40px; font-family: Terminal Dosis Light; color: rgb(51, 51, 51);}
+.sidebox-title{font-weight: bold; font-style: normal; font-size: 14px; letter-spacing: 0px; line-height: 40px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);}
 
 .sidebox a{color: rgb(191, 13, 0); font-family: Maven Pro;}
 
@@ -213,9 +233,9 @@ h2{font-weight: bold; font-style: normal; ;font-family: Verdana,sans-serif; font
 
 .breadcrumbs a{color: rgb(191, 13, 0);font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;}
 
-#divHeaderLine1{font-family: Verdana, sans-serif; font-size: 20px; line-height: 40px; margin-top: 16px; text-transform: none; color: rgb(47, 47, 47);}
+#divHeaderLine1{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 20px; line-height: 40px; margin-top: 16px; text-transform: none; color: rgb(47, 47, 47);}
 
-#divHeaderLine2{font-family: Verdana, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(47, 47, 47); 1px 1px 1px;}
+#divHeaderLine2{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(47, 47, 47); 1px 1px 1px;}
 
 #divHeaderLine3{margin-top: 37px; line-height: 18px; font-family: Verdana, sans-serif; font-size: 11px}
 
