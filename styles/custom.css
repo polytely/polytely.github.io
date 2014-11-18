@@ -22,7 +22,7 @@
 h3, h4, h5, h6 {line-height:1.5 !important}
 
 p {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
 
 .tab{ margin-left: 40px; }
 
@@ -41,7 +41,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; li
 
 
 .read-more {
-    text-align: right;
+    text-align: right; 
 }
 
 div.c1 li.c2 a {
@@ -88,6 +88,38 @@ margin-right:7px;margin-bottom:7px;float:left;
 
 #tiles li blockquote small {font-size:11px;font-style:normal;}
 
+
+/* list #1 */
+#list1 ol { font-style:italic; font-family:Georgia, Times, serif; font-size:16px; color:#585858;  text-align: justify;}
+#list1 ol li { }
+#list1 ol li p { padding:8px; font-style:normal; text-align: justify; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:13px; color:#000000; border-left: 1px solid #999; }
+#list1 ol li p em { display:block; }
+
+/* list #2 */
+#list2 ul { list-style-image: url("wonder.png"); font-style:italic; font-family:Georgia, Times, serif; font-size:16px; color:#585858;  text-align: justify;}
+#list2 ul li { }
+#list2 ul li p {padding:8px; font-style:normal; text-align: justify; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:13px; color:#000000}
+#list2 ul li p em { display:block; }
+
+/* list #3 */
+ul.list3 { list-style-image: url("tick.ico"); font-style:italic; font-family:Georgia, Times, serif; font-size:16px; color:#585858;  text-align: justify;}
+ul.list3 li { }
+ul.list3 li p {display:block; text-align: justify;}
+
+hr.post {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    width: 75%;
+    margin: 2.5em 10% 2em 10%;
+    padding: 0;
+}
+
+A.post {color:rgb(0, 120, 0);}
+A.post:link  {text-decoration: none; color: rgb(0, 120, 0);}
+A.post:visited {text-decoration: none; color: rgb(0, 120, 0);}
+A.post:hover {text-decoration: underline; color: rgb(0, 120, 0);}
 
 /* Icons */
 
@@ -202,7 +234,7 @@ body.home{background: url(crossword.png) repeat;}
 
 .cap5 > div {opacity: 0.85;filter:alpha(opacity=85);background-color:rgb(219, 172, 0);}
 
-.camera_full_width {margin-left: -40px;margin-right: -40px}
+.camera_full_width {margin-left: -40px;margin-right: -40px;}
 
 h1{font-weight: bold; font-style: normal; letter-spacing: 0px; line-height: 30px; margin-top: 15px; 
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 16px; color: rgb(0, 0, 0);}
@@ -275,7 +307,7 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Ter
 
 .navbar .dropdown-menu {background-color: rgb(255, 255, 255);}
 
-.navbar .dropdown-menu li > a {color: rgb(0, 120, 0);}
+.navbar .dropdown-menu .active li > a {color: rgb(0, 120, 0);}
 
 .navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu .active > a, .navbar .dropdown-menu .active > a:hover {filter:none;color:rgb(0, 120, 0);background-color:rgb(255, 255, 255);background-image:none}
 
@@ -304,7 +336,7 @@ h6,.page-content h6 a{font-weight: normal; font-style: normal; ;font-family: Ter
 .ddmenu .dropdown-menu li a{font-family: Verdana,sans-serif; line-height: 30px;}
 
 .dropdown-menu .sub-menu {left:100%;position:absolute;top:0;visibility:hidden;margin-top:-1px;}
-.dropdown-menu li:hover .sub-menu {visibility:visible;}
+.dropdown-menu li:hover .sub-menu {visibility:hidden;}
 .navbar .btn-navbar-highlight {display:none;width:100%}
 
 @media (max-width: 979px) {
