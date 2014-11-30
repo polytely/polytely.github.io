@@ -81,6 +81,7 @@
 								<li><a href="efficiency.html">Energy Efficiency</a></li>
 							</ul>
 						</li>
+						<li class="active"><a href="resources.html">Resources</a></li>
 						<li><a href="contact.html">Contact us</a></li>
 					</ul>
 					</div></div>
@@ -99,49 +100,6 @@
     <div class="contentArea">
 
         <div class="divPanel notop page-content">
-
-			<div class="row-fluid">
-                <div class="span12" id="divMain">
-                    <h1>The role of data analytics in creating energy efficiency services</h1>
-                    <p>Big Data is a term consistently found in articles and solutions concerning energy efficiency, 
-					the premise being that smart meters – and smart grids in general – are able to collect and make 
-					available large volumes of data, the analysis of which can help identify relationships that 
-					were previously unnoticed, improve predictability and facilitate new services of information 
-					provision. Although this premise is generally true, it helps if we have already defined the questions that our 
-					data analytics algorithms should be able to address. In Polytely, we are focusing on two challenges 
-					that are critical, according to our way of perceiving the energy efficiency services to provide.</p>
-					
-					<p>The first challenge is to extract of set of recurring patterns in a stream 
-					of energy consumption data from a large number of households, so as to perform <u>meaningful</u> 
-					clustering of these households. Contrary to the aggregated load curves which are characterized by their seasonality,
-					regularity and sensitivity to meteorological conditions, household load curves are very volatile, 
-					their shape depends mainly on the consumer behaviour and are less dependent on weather conditions. 
-					Consequently, our focus is on identifying and exploiting common consumption behaviour patterns in 
-					a load profiles stream.</p>
-					</div>
-					</div>
-				
-					<div class="media">
-					<a class="pull-right" href="styles/discovery.png">
-					<img class="thumbnail" src="styles/discovery.png" alt="Discovering patterns" style="height:200px;">
-					</a>
-					<div class="media-body"><p class="media-heading">In reality, this is a feature extraction problem and in this context 
-					meaningful clustering implies the ability to associate recurring patterns in consumption with actual 
-					practices in the consumers's daily routines. Intelligent efficiency is largely based on the premise that 
-					clustering by recurrent patterns will lead to results that are significantly similar to the actual 
-					segmentation of the consumers based on their habits and characteristics.</p>
-					</div>
-					</div>
-					<p>The second challenge concerns the estimation of the willingness or capability of the consumers to 
-					adapt their consumption profiles in response to external recommendations. One way to approach this 
-					issue is as if each consumer can be represented by one model that generates a load profile segment 
-					based on the load profile segment’s class during the previous time interval and by another model that 
-					generates deviations in this load profile as a response to a recommendation received.</p>
-
-					<hr class="post"/>
-				</div>
-			</div>
-		
             <div class="row-fluid">
                 <div class="span12" id="divMain">
                     <h1>Exploring and implementing interesting ideas</h1>
@@ -168,32 +126,78 @@
 			
 			<div class="row-fluid">
                 <div class="span12" id="divMain">
-                    <h1>Regression Trees</h1>
-					<p>One of the first algorithms to implement is the well-known regression trees. 
-					   Although not a good tool for predictive modeling (mainly due to the lack of a 
-					   principled probabilistic framework), trees are a good solution for exploring data 
-					   and facilitating its visualization. Here, we aim to develop a useful 
-					   implementation.</p>
+                    <h1>Regression Trees for policy assessment</h1>
+					<p>We are in the process of building an open source decision support system that leverages the availability of public domain 
+					   data, so as to provide insights on the dynamics that govern a national power market. In particular, we want to provide the 
+					   functionality to collect, transform and analyze power market data, as well as to visualize the monetary flows between the 
+					   relevant market actors. Data analysis aims at factor attribution; we can observe what actually happened in a given power 
+					   market but we also want to understand which factors were the most influential, as well as the direction of their influence.</p>
+					<p>Furthermore, one way to perceive a power market is as a network of actors connected through transactions and monetary flows. 
+					   Understanding and visualizing these monetary flows can contribute significantly to the assessment of the policy interventions 
+					   in the market, particularly when one wants to explore the possible conflicts or alliances between the involved actors if the 
+					   system’s state would change due to either the effectuation of a policy measure or a shift in the external drivers of the 
+					   system. The main premise is that by identifying conditions of conflicting interests between the involved actors, one can 
+					   devise a roadmap of least resistance for a policy measure to attain its goals.</p>
+					<p>The task of data analysis will be based on recursive partitioning and regression trees. In more details:</p>
+					<div id="list4">
+					<ol>
+						<li><p>The point of departure of the implementation is the RETIS tree-based regression approach <a style="color:blue" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.35.2878">(Karali, 1992)</a>, 
+						    which uses linear regression models in the tree leaves. RETIS evaluates a split by building a multiple linear model 
+							for each subset and computing its residual variance.</p></li> 
+						<li><p>Due to the existence of multicollinearity in the variables describing, ridge regression will be employed as a 
+						    model for each mode. There are computational shortcuts - e.g. <a style="color:blue" href="http://arxiv.org/pdf/1003.3570.pdf ">
+							(Pahikkala, Airola and Salakoski, 2010)</a> - that permit fast updating of the models' coefficients when adding new or removing 
+							existing data.</p></li>
+						<li><p>Including a new feature in a node’s probabilistic model and splitting a node’s data by adding a new rule are very similar tasks under a 
+						    feature selection perspective. Consequently, at each node the algorithm chooses either to include an additional feature or include a 
+							new splitting rule. <a style="color:blue" href=" http://jmlr.org/papers/v7/zhou06a.html">Streamwise Feature Selection</a> will be 
+							employed to regulate the tree development.</p></li>
+						<li><p>The algorithm will actively track concept drift in the data. Concept drift cannot be avoided for complex phenomena that are 
+						    not governed by fixed laws of nature. All processes that arise from human activity, such as socioeconomic processes, and 
+							biological processes are likely to experience concept drift. At the same time, the trend contains information that we don’t 
+							want to lose. We are interested in finding what actually drives the trend in the data or, equivalently if there is a stable 
+							long-run relationship between some of the data.</p>
+							<p>The important idea here is that non-stationarity is not a problem of the data, but a problem of the methods that are sometimes 
+							   used for its analysis and which have a hard time distinguishing between the next two cases:</p>
+							   <ul>
+							   <li><p>Two processes are dependent because changes in the one are reflected in changes in the other.</p></li>
+                               <li><p>Two processes have similar (opposite) trends, and naturally higher values of the first one are paired with 
+							       higher (lower) values of the other.</p></li>
+							   </ul>
+							<p>At the same time, there are cases where we want to separate the long-run trend from the short-run dynamics of a 
+							   system. As an example, the spot (hub) natural gas price can be decomposed into:<p>
+							    <div class="row-fluid">
+								<div class="span8">
+									<ol>
+									<li><p>A long-run trend that is inevitably associated with the long-run evolution of the natural gas production and distribution costs, as well as the price evolution of potential substitutes (mainly coal).</p></li>
+									<li><p>A seasonal spread in the price that is associated with weather and economic activity seasonality, as well as the available total storage capacity.</p></li>
+									<li><p>The short-run deviations that are driven by deviations in the expected (based on the previous years’ experience) conditions in demand and supply.</p></li>
+									</ol>
+								</div>
+								<div class="span4">
+										<a href="styles/ngas.png"> <img height=50 src="styles/ngas.png"></a>
+								</div>
+								</div>
+							<p>This conceptual model of the natural gas price reflects an interesting approach; rather than identifying and removing 
+							   the trend, one could track a relationship between the trends of the variables. What is left can be assumed to be the 
+							   short-run dynamics.</p>
+						</li>
+					</ol>
+					</div>
 				</div>
 				
 				<div class="read-more">
-						<a class="btn btn-success fa fa-code" href="http://nbviewer.ipython.org/github/polytely/polytely.github.io/blob/master/code/lrt.ipynb">&nbsp;&nbsp;Code</a>
-					</div>
-					<br /><br />
+						<a class="btn btn-lg btn-success" href="http://nbviewer.ipython.org/github/polytely/polytely.github.io/blob/master/code/lrt.ipynb">View on GitHub</a>
+				</div>
+					<br /><br /><br/><br />
 					<hr />
+					<p class="copyright">&copy; Polytely 2014.  All rights reserved.</p>
 			</div>
-				
 			
-        <br/><br />
-
-         <div class="span12">
-			<p class="copyright">
-            &copy; Polytely 2014.  All rights reserved.
-			</p>
-			</div> 
-	<br /><br />
 		
     </div>
+	
+	</div>
 
 </div>    
 

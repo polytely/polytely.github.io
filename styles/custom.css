@@ -106,6 +106,11 @@ ul.list3 { list-style-image: url("tick.ico"); font-style:italic; font-family:Geo
 ul.list3 li { }
 ul.list3 li p {display:block; text-align: justify;}
 
+/* list #4 */
+#list4 ol {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
+#list4 ol li { }
+#list4 ol li p {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px; margin-top: 11px; text-align: justify; color: rgb(0, 0, 0); 1px 1px 1px;}
+
 hr.post {
     display: block;
     height: 1px;
